@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Header, Footer
+import Header from './components/Header';
+import Footer from './components/Footer';
+//Main
+import Section1 from './components/main/Section_1';
+//소개
+
+//이력관리시스탬
+
+//제공서비스
+
+//고객센터
+
+
+class App extends React.Component<{}, {}> {
+  render(): React.ReactNode {
+    return (
+      <div className="App">
+        <Header />
+        {/* main */}
+        <Section1 />
+        {/* 소개 */}
+
+        {/* 이력관리시스탬 */}
+
+        {/* 제공서비스 */}
+
+        {/* 고객센터 */}
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
