@@ -21,7 +21,7 @@ class Section3 extends React.Component<{}, {}> {
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    maxWidth: '90%',
+                    maxWidth: '75%',
                     margin: '0 auto'
                 }}>
                     {/* left */}

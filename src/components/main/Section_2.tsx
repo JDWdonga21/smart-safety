@@ -13,7 +13,7 @@ class Section2 extends React.Component<{}, {}> {
     render(): React.ReactNode {
         return(
             <Box sx={{position: 'relative', padding: '100px 0', backgroundColor: '#f9f9f9', marginTop: '-0.6vh'}}>
-                <Box sx={{position: 'relative', maxWidth: '100%', margin: '0 auto'}}>
+                <Box sx={{position: 'relative', maxWidth: '75%', margin: '0 auto'}}>
                     <h1 style={{fontSize: '30px', margin: 0, lineHeight: '1.3', fontWeight: '400', color: '#000', textAlign: 'center'}}> 
                         양방향, 즉답식 안전관리가 가능한
                         <br />

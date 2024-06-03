@@ -9,7 +9,7 @@ class Section_5 extends React.Component<{}, {}> {
                 backgroundColor: '#0e110e',
             }}>
                 <div style={{
-                    maxWidth: '90%',
+                    maxWidth: '75%',
                     position: 'relative',
                     width: '100%',
                     margin: '0 auto',

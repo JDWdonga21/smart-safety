@@ -3,6 +3,7 @@ import React, { CSSProperties } from 'react';
 import logo from '../assets/logo/logo.svg';
 import qr2 from '../assets/img/qrcode/qr2.svg';
 import blogimg from '../assets/img/blog/blog.svg'
+import topBtn from '../assets/img/footerbtn/top.svg'
 
 class Footer extends React.Component<{}, {}> {
   render(): React.ReactNode {
@@ -75,6 +76,12 @@ class Footer extends React.Component<{}, {}> {
           </div>
           {/* Clear Fix */}
           <div style={styles.clear}></div>
+          <div>
+            <div style={styles.goTop}>
+              <img src={topBtn} width={'100%'} alt='홈페이지 상단으로 가기' />
+            </div>
+            <a href='/' style={styles.faqBtn}>FAQ</a>
+          </div>
         </div>
       </div>
     );
@@ -88,7 +95,7 @@ const styles: { [key in string]: CSSProperties } = {
     borderTop: '1px solid #ccc'
   },
   footerIn: {
-    maxWidth: '90%',
+    maxWidth: '75%',
     padding: '5% 0',
     position: 'relative',
     width: '100%',
@@ -108,7 +115,7 @@ const styles: { [key in string]: CSSProperties } = {
     textAlign: 'center'
   },
   clear: {
-    clear: 'both'
+    
   },
   fLogo: {
     float: 'left',
@@ -167,6 +174,39 @@ const styles: { [key in string]: CSSProperties } = {
   },
   noColor : {
     filter: 'grayscale(100%)',
+  },
+  goTop: {
+    bottom: '9%',
+    cursor: 'pointer',
+    zIndex: '99',
+    transition: 'all .5s',
+    opacity: 1,
+
+    width: '80px',
+    height: '80px',
+    borderRadius: '100%',
+    position: 'fixed',
+    right: '5%',
+  },
+  faqBtn: {
+    paddingTop: 0,
+    lineHeight: '80px',
+    position: 'fixed',
+    right: '5%',
+    bottom: '21%',
+    display: 'block',
+    width: '80px',
+    height: '80px',
+    background: 'linear-gradient(45deg, #4ece39, #00a856)',
+    borderRadius: '100%',
+    fontSize: '16px',
+    fontWeight: '700',
+    color: '#fff',
+    textAlign: 'center',
+    boxShadow: '0 0 0 rgba(244,154,25,.8)',
+    opacity: 1,
+    transition: 'all .5s',
+    zIndex: '99'
   }
 }
 

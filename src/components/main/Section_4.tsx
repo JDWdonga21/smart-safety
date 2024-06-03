@@ -15,7 +15,7 @@ class Section4 extends React.Component<{}, {}> {
                 padding: '100px 0',
             }}>
                 <div style={{
-                    maxWidth: '90%',
+                    maxWidth: '75%',
                     position: 'relative',
                     width: '100%',
                     margin: '0 auto'
