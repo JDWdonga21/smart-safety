@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 //Main
 import Section1 from './components/main/Section_1';
+import Section2 from './components/main/Section_2';
+import Section3 from './components/main/Section_3';
 //소개
 
 //이력관리시스탬
@@ -22,6 +24,8 @@ class App extends React.Component<{}, {}> {
         <Header />
         {/* main */}
         <Section1 />
+        <Section2 />
+        <Section3 />
         {/* 소개 */}
 
         {/* 이력관리시스탬 */}
