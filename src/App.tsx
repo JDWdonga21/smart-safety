@@ -13,6 +13,7 @@ import Section5 from './components/main/Section_5';
 //소개
 import Company from './components/sub/Company';
 import Introduction from './components/sub/Introduction';
+import History from './components/sub/History';
 //이력관리시스탬
 
 //제공서비스
@@ -22,7 +23,7 @@ import Introduction from './components/sub/Introduction';
 
 type AppState = {
   // 현재 표시되는 화면 추적
-  currentScreen: 'main' | 'company' | 'intro' | 'system' | 'subvice' | 'customer';
+  currentScreen: 'main' | 'company' | 'intro' | 'history' | 'subvice' | 'customer';
 };
 
 class App extends React.Component<{}, AppState> {
@@ -48,7 +49,7 @@ class App extends React.Component<{}, AppState> {
       })
     } else if(select === 3 ){
       this.setState({
-        currentScreen : 'system',
+        currentScreen : 'history',
       })
     } else if(select === 4 ){
       this.setState({
@@ -88,8 +89,8 @@ class App extends React.Component<{}, AppState> {
           <Introduction />
         )}
         {/* 이력관리시스탬 */}
-        {currentScreen === 'system' &&(
-          <></>
+        {currentScreen === 'history' &&(
+          <History />
         )}
         {/* 제공서비스 */}
         {currentScreen === 'subvice' &&(

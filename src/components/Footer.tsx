@@ -54,10 +54,11 @@ class Footer extends React.Component<FooterProps, {}> {
               <a href='/' style={{ textDecoration: 'none', color: '#333' }}>이용약관</a>
               <span style={styles.fline}></span>
               <a href='/' style={{ textDecoration: 'none', color: '#333' }}>개인정보처리방침</a>
-            </div>
-            <small style={styles.fInfo}>
-              Copyright ⓒ 2021 (주)부산안전원 All Rights Reserved.
-            </small>
+              <br />
+              <small style={styles.fInfo}>
+                Copyright ⓒ 2021 (주)부산안전원 All Rights Reserved.
+              </small>
+            </div>            
           </div>
           {/* App Download and Blog */}
           <div style={styles.fApp}>
@@ -127,7 +128,9 @@ const styles: { [key in string]: CSSProperties } = {
   },
   fGnb: {
     fontSize: 0,
-    listStyle: 'none'
+    listStyle: 'none',
+    textAlign: 'left',
+    padding: 0
   },
   fGnbLi: {
     display: 'inline-block',
@@ -139,7 +142,8 @@ const styles: { [key in string]: CSSProperties } = {
     margin: '26px 0',
     fontSize: '14px',
     lineHeight: 1.4,
-    color: '#605d5b'
+    color: '#605d5b',
+    textAlign: 'left'
   },
   utills: {
     marginBottom: 0,
@@ -147,6 +151,7 @@ const styles: { [key in string]: CSSProperties } = {
     fontSize: '14px',
     lineHeight: 1.4,
     color: '#605d5b',
+    textAlign: 'left'
   },
   fline: {
     display: 'inline-block',
