@@ -85,7 +85,7 @@ class history extends React.Component<{}, HistoryState> {
                                     </div>
                                     <a href="/" style={styles.kindsLiA}>+</a>
                                 </li>
-                                <li style={styles.kindsLin}>
+                                <li onClick={()=>this.handleOpenModal(1)} style={styles.kindsLin}>
                                     <img src={h_02_02} alt="제조업" style={styles.kindsLiImg}/>
                                     <div style={styles.kindsLiDiv}>
                                         <strong style={{fontSize: '18px'}}>제조업</strong>
@@ -97,7 +97,7 @@ class history extends React.Component<{}, HistoryState> {
                         </div>
                         <div className="history-kinds">
                             <ul style={styles.kindsUl}>
-                                <li style={styles.kindsLi}>
+                                <li onClick={()=>this.handleOpenModal(2)} style={styles.kindsLi}>
                                     <img src={h_04_02} alt="건설업" style={styles.kindsLiImg}/>
                                     <div style={styles.kindsLiDiv}>
                                         <strong style={{fontSize: '18px'}}>건설업</strong>
@@ -105,7 +105,7 @@ class history extends React.Component<{}, HistoryState> {
                                     </div>
                                     <a href="/" style={styles.kindsLiA}>+</a>
                                 </li>
-                                <li style={styles.kindsLin}>
+                                <li onClick={()=>this.handleOpenModal(3)} style={styles.kindsLin}>
                                     <img src={h_06} alt="기타" style={styles.kindsLiImg}/>
                                     <div style={styles.kindsLiDiv}>
                                         <strong style={{fontSize: '18px'}}>기타</strong>
