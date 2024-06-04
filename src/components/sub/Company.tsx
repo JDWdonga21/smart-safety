@@ -28,7 +28,7 @@ class Company extends React.Component<{}, {}> {
                             }}>
                                 안전과 노무를 한 곳에서!
                             <br/>
-                            <strong>(주)부산안전원</strong>
+                            <strong style={styles.topTitleStrong}>(주)부산안전원</strong>
                         </h1>
                         <div style={styles.location}>
                             <a href="/" style={styles.locationA}>
@@ -221,6 +221,11 @@ const styles: {[key in string]: CSSProperties} = {
         width: '100%',
         maxWidth: '75%',
         margin: '0 auto',
+    },
+    topTitleStrong: {
+        display: 'block',
+        width: '52%',
+        fontWeight: '700'
     },
     location: {
       position: 'absolute',

@@ -12,6 +12,7 @@ import Section4 from './components/main/Section_4';
 import Section5 from './components/main/Section_5';
 //소개
 import Company from './components/sub/Company';
+import Introduction from './components/sub/Introduction';
 //이력관리시스탬
 
 //제공서비스
@@ -84,7 +85,7 @@ class App extends React.Component<{}, AppState> {
         )}
         {/* 스마트 안전 소개 */}
         {currentScreen === 'intro' &&(
-          <></>
+          <Introduction />
         )}
         {/* 이력관리시스탬 */}
         {currentScreen === 'system' &&(
