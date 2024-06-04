@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
 }
-div, img, li {
+div, img, li, h1 {
   font-family:"Noto Sans KR", "sans-serif";
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing:antialiased;

@@ -11,7 +11,7 @@ import Section3 from './components/main/Section_3';
 import Section4 from './components/main/Section_4';
 import Section5 from './components/main/Section_5';
 //소개
-
+import Company from './components/sub/Company';
 //이력관리시스탬
 
 //제공서비스
@@ -25,13 +25,13 @@ class App extends React.Component<{}, {}> {
       <div className="App">
         <Header />
         {/* main */}
-        <Section1 />
+        {/* <Section1 />
         <Section2 />
         <Section3 />
         <Section4 />
-        <Section5 />
+        <Section5 /> */}
         {/* 소개 */}
-
+        <Company />
         {/* 이력관리시스탬 */}
 
         {/* 제공서비스 */}
