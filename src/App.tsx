@@ -19,25 +19,88 @@ import Company from './components/sub/Company';
 //고객센터
 
 
-class App extends React.Component<{}, {}> {
+type AppState = {
+  // 현재 표시되는 화면 추적
+  currentScreen: 'main' | 'company' | 'intro' | 'system' | 'subvice' | 'customer';
+};
+
+class App extends React.Component<{}, AppState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      currentScreen: 'main',
+    };
+  }
+
+  handleCurrentScreen = (select : number) => {
+    if(select === 0){
+      this.setState({
+        currentScreen : 'main',
+      })
+    } else if(select === 1 ){
+      this.setState({
+        currentScreen : 'company',
+      })
+    } else if(select === 2 ){
+      this.setState({
+        currentScreen : 'intro',
+      })
+    } else if(select === 3 ){
+      this.setState({
+        currentScreen : 'system',
+      })
+    } else if(select === 4 ){
+      this.setState({
+        currentScreen : 'subvice',
+      })
+    } else if(select === 5 ){
+      this.setState({
+        currentScreen : 'customer',
+      })
+    }        
+  };
+
+
   render(): React.ReactNode {
+    const { currentScreen } = this.state;
     return (
       <div className="App">
-        <Header />
+        <Header 
+          handleCurrentScreen = {this.handleCurrentScreen}
+        />
         {/* main */}
-        {/* <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 /> */}
-        {/* 소개 */}
-        <Company />
+        {currentScreen === 'main' && (
+          <>
+            <Section1 />
+            <Section2 />
+            <Section3 />
+            <Section4 />
+            <Section5 />
+          </>
+        )}        
+        {/* 회사 소개 */}
+        {currentScreen === 'company' &&(
+          <Company />
+        )}
+        {/* 스마트 안전 소개 */}
+        {currentScreen === 'intro' &&(
+          <></>
+        )}
         {/* 이력관리시스탬 */}
-
+        {currentScreen === 'system' &&(
+          <></>
+        )}
         {/* 제공서비스 */}
-
+        {currentScreen === 'subvice' &&(
+          <></>
+        )}
         {/* 고객센터 */}
-        <Footer />
+        {currentScreen === 'customer' &&(
+          <></>
+        )}
+        <Footer
+          handleCurrentScreen = {this.handleCurrentScreen}
+        />
       </div>
     );
   }

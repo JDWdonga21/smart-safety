@@ -5,7 +5,11 @@ import qr2 from '../assets/img/qrcode/qr2.svg';
 import blogimg from '../assets/img/blog/blog.svg'
 import topBtn from '../assets/img/footerbtn/top.svg'
 
-class Footer extends React.Component<{}, {}> {
+
+type FooterProps = {
+  handleCurrentScreen: (select : number)=>void
+}
+class Footer extends React.Component<FooterProps, {}> {
   render(): React.ReactNode {
     return (
       <div style={styles.footer}>
@@ -22,16 +26,16 @@ class Footer extends React.Component<{}, {}> {
           <div style={styles.fUtill}>
             <ul style={styles.fGnb}>
               <li style={styles.fGnbLi}>
-                <a href='/' style={{ color: '#000', textDecoration: 'none' }}>회사소개</a>
+                <div onClick={() => this.props.handleCurrentScreen(1)} style={{ color: '#000', textDecoration: 'none' }}>회사소개</div>
               </li>
               <li style={styles.fGnbLi}>
-                <a href='/' style={{ color: '#000', textDecoration: 'none' }}>스마트안전소개</a>
+                <div onClick={() => this.props.handleCurrentScreen(2)} style={{ color: '#000', textDecoration: 'none' }}>스마트안전소개</div>
               </li>
               <li style={styles.fGnbLi}>
-                <a href='/' style={{ color: '#000', textDecoration: 'none' }}>이력관리시스템</a>
+                <div onClick={() => this.props.handleCurrentScreen(3)} style={{ color: '#000', textDecoration: 'none' }}>이력관리시스템</div>
               </li>
               <li style={styles.fGnbLi}>
-                <a href='/' style={{ color: '#000', textDecoration: 'none' }}>제공서비스</a>
+                <div onClick={() => this.props.handleCurrentScreen(4)} style={{ color: '#000', textDecoration: 'none' }}>제공서비스</div>
               </li>
               <li style={styles.fGnbLi}>
                 <a href='/' style={{ color: '#000', textDecoration: 'none' }}>공지사항</a>
